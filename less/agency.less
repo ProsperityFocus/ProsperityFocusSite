@@ -85,22 +85,15 @@ h1, h2, h3, h4, h5, h6 {
     border-color: transparent;
     .navbar-brand {
         color: @brand-primary;
+        .text-outline(#000);
         .script-font;
+
         &:hover,
         &:focus,
         &:active,
         &.active {
             color: darken(@brand-primary, 10%);
         }
-
-        text-shadow: -2px -2px 4px #FFF,
-                      2px -2px 4px #FFF,
-                     -2px  2px 4px #FFF,
-                      2px  2px 4px #FFF,
-                     -2px -2px 4px #FFF,
-                      2px -2px 4px #FFF,
-                     -2px  2px 4px #FFF,
-                      2px  2px 4px #FFF;
     }
     .navbar-collapse {
         border-color: fade(white, 2%);
@@ -166,7 +159,11 @@ h1, h2, h3, h4, h5, h6 {
         padding: 10px 0;
         .navbar-brand {
             font-size: 1.5em;
-        }    
+        }
+    }
+
+    .navbar-default:not(.navbar-shrink) li:not(.active) {
+        .text-outline(#000);
     }
 }
 
@@ -187,13 +184,15 @@ header {
             font-size: 22px;
             line-height: 22px;
             margin-bottom: 25px;
+            .text-outline(#000);
         }
         .intro-heading {
-            .heading-font;
+            .script-font;
             font-weight: 700;
             font-size: 50px;
             line-height: 50px;
             margin-bottom: 25px;
+            .text-outline(#000);
         }
     }
 }
@@ -211,7 +210,6 @@ header {
                 margin-bottom: 25px;
             }
             .intro-heading {
-                .heading-font;
                 font-weight: 700;
                 font-size: 75px;
                 line-height: 75px;
